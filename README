@@ -1,0 +1,62 @@
+Chaosagent - A speaking search agent
+Programmed by Bastian Ballmann
+21.11.2007
+
+////[ About
+
+Chaosagent is a tool for automating (and filtering) searches with Yahoo, 
+converting search results to RSS feed, collecting a list of RSS feeds, 
+filter them for regexp and generate a new feed or for just looking up the 
+weather outside.
+Chaosagent can present results in text and speech mode (using festival). 
+It can read search results and if you like download all found urls and 
+dump them to your disk.
+
+
+////[ License
+
+GNU General public license version 2.
+
+
+////[ Installation
+
+1. Make sure you have installed festival
+(e.g. on Debian like systems apt-get install festival)
+
+2. Run install.sh to install required Perl modules via CPAN
+(If you were ask about manual configuration say no, otherwise hit enter.)
+
+
+////[ Howto use it
+
+1.Edit queries.xml and enter your search terms and unwanted keywords, urls
+and filetypes
+
+2. Get a cup of coffee or something similiar.
+
+3. Exec ./chaosagent.pl -f queries.xml
+
+Want an RSS feed of found URLs?
+./chaosagent.pl -f queries.xml -o output_dir
+
+Want to hear website summaries?
+Exec ./chaosagent.pl -f queries.xml --summary
+
+Want to dump all found urls?
+Exec ./chaosagent.pl -d -f queries.xml -o dumpdir
+
+Want to get weather data?
+Exec ./chaosagent.pl -w <your_location>
+
+The agent should read your latest news?
+Exec ./chaosagent.pl -r rssfeeds.xml
+
+Want to get an rss feed with your latest filtered news?
+Exec ./chaosagent.pl -r rssfeeds.xml -o . --quite
+
+
+////[ Tips & Tricks
+
+Configure festival voice:
+apt-get install festvox-rablpc16k
+echo "(set! voice_default 'voice_rab_diphone)" >> /etc/festival.scm

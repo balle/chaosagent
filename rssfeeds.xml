@@ -1,0 +1,30 @@
+<rssfeeds>
+  <group>
+  	<feed>http://rss.slashdot.org/Slashdot/slashdot</feed>
+    <feed>http://www.theregister.co.uk/headlines.rss</feed>
+    <feed>http://osnews.com/files/recent.xml</feed>
+    <feed>http://trifinite.org/blog/index.rdf</feed>
+
+    <!-- Only report headline of feed if one of the following
+         keywords was found. You can use regexp -->
+    <keyword>Linux</keyword>
+    <keyword>FreeBSD</keyword>
+    <keyword>Open Source</keyword>
+    <keyword>Perl</keyword>
+    <keyword>Java</keyword>
+    <keyword>Bluetooth</keyword>
+    <keyword>Security</keyword>
+  </group>
+  <group>
+    <feed>http://feeds.feedburner.com/testdrivennewslinks</feed>
+    <keyword>.*</keyword>
+  </group>
+  <group>
+  	<feed>http://planet.perl.org/rss20.xml</feed>
+  	<feed>http://www.oreillynet.com/pub/feed/16</feed>
+  	<keyword>XML</keyword>
+  	<keyword>Crypt</keyword>
+  	<keyword>Class\:\:</keyword>
+  	<keyword>CPAN</keyword>
+  </group>
+</rssfeeds>
